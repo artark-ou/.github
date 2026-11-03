@@ -1,0 +1,38 @@
+name: "Fix — small"
+description: "A localized bug or regression with a straightforward correction."
+title: "FIX: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        GitHub assigns the issue number; refer to this fix as **FIX #<issue number>**.
+        Use the substantial fix template when the change crosses multiple domains, requires migration, or has notable risks.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is wrong, and what should happen instead?
+      placeholder: "Current behavior → expected behavior"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction or affected area
+      description: Steps, screenshots, relevant screen/endpoint, or affected source area.
+    validations:
+      required: false
+  - type: textarea
+    id: correction
+    attributes:
+      label: Proposed correction
+      description: Smallest appropriate fix; leave open if the solution is not yet agreed.
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance and regression check
+      description: What will prove this fixed? Include a regression test when feasible.
+    validations:
+      required: true
