@@ -1,0 +1,60 @@
+name: "Fix — substantial"
+description: "A multi-area, risky, or architectural correction needing a scoped implementation contract."
+title: "FIX: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        GitHub assigns the issue number; refer to this fix as **FIX #<issue number>**.
+        This issue is the authoritative active fix specification, not permission to implement it.
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Critical — integrity or security
+        - High — significant user impact
+        - Medium — operational or functional impact
+        - Low — minor defect
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and impact
+      description: Observed behavior, expected behavior, root cause if known, and consequences.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Accepted solution and exclusions
+      description: Intended correction, explicit non-goals, and unresolved design choices. Mark proposed decisions as proposals until accepted.
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Ownership and dependencies
+      description: Affected modules, API/schema/data changes, prerequisites, integration boundaries and any files not to modify.
+    validations:
+      required: true
+  - type: textarea
+    id: tests
+    attributes:
+      label: Acceptance and regression coverage
+      description: Observable success criteria and focused tests, including negative, failure, workspace isolation or migration cases as relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: completion
+    attributes:
+      label: Completion and verification
+      description: Quality gates, manual checks and central specification updates needed before closure.
+      value: |
+        - [ ] Implement the accepted correction on the agreed branch.
+        - [ ] Add or update focused regression tests.
+        - [ ] Run applicable repository verification.
+        - [ ] Preserve durable decisions in central `.spec/` documents.
+    validations:
+      required: true
